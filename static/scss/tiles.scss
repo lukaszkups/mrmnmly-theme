@@ -1,0 +1,204 @@
+@import './vars.scss';
+
+.flex-row {
+  display: flex;
+
+  &.flex-row--wrap {
+    flex-wrap: wrap;
+  }
+
+  .flex-row__item {
+    background: $gray-light;
+    color: inherit;
+    height: $tile-height;
+    margin: $margin-micro;
+    min-height: $tile-height;
+    overflow: hidden;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &.flex-row__item--single,
+    &.flex-row__item--double {
+      box-sizing: border-box;
+      padding: $padding-regular;
+    }
+
+    &.flex-row__item--single {
+      flex: 1;
+    }
+
+    &.flex-row__item--double {
+      flex: 1.71;
+    }
+
+    &.flex-row__item--promo-tile {
+      background: $blue-dark;
+      border-top-left-radius: 2px;
+      color: $white;
+      font-size: $font-size-promo-tile;
+      letter-spacing: -0.085em;
+      line-height: $tile-height;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &.flex-row__item--centered-tile {
+      line-height: $tile-height;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &.flex-row__item--content-tile {
+      padding: $padding-smaller * 3 $padding-bigger * 3;
+
+      h2 {
+        font-size: $font-size-tile-h2;
+        margin-bottom: $margin-regular;
+      }
+
+      p {
+        color: inherit;
+        line-height: $content-tile-p-line-height;
+        margin: 0;
+        padding: 0;
+        transition: color 0.25s;
+      }
+
+      &:hover p {
+        color: inherit;
+        transition: color 0.25s;
+      }
+    }
+
+    &.flex-row__item--transparent-tile {
+      background: transparent;
+
+      &:hover {
+        background: transparent;
+      }
+
+      h2, p {
+        color: $blue-dark;
+      }
+
+      &:hover {
+        color: $blue-dark;
+      }
+    }
+
+    &.flex-row__item--horizontal-padding-tile {
+      padding: 0 $padding-bigger * 3;
+    }
+
+    &.flex-row__item--avatar-bg {
+      background: url("/static/assets/img/avatar.jpg") no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &.flex-row__item--hover-blue-bg:hover {
+      background: $blue-dark;
+      color: $white;
+    }
+
+    &.flex-row__item--clickable:hover {
+      cursor: pointer;
+    }
+
+    &.flex-row__item--fixed-size {
+      background: transparent;
+      box-sizing: border-box;
+      margin: 0;
+      overflow: hidden;
+      padding: $padding-micro;
+      width: $container-width / 3;
+
+      &.flex-row__item--double-fixed-size {
+        width: ($container-width / 3) * 2;
+      }
+    }
+
+    .flex-row-item__content-wrapper {
+      background: $gray-light;
+      box-sizing: border-box;
+      color: $black;
+      height: 100%;
+      min-height: 100%;
+      overflow: hidden;
+      padding: $padding-regular * 3;
+      position: relative;
+      transition: 0.2s background;
+      width: 100%;
+
+      &.flex-row-item__content-wrapper--transparent-bg {
+        background: transparent;
+      }
+
+      h2 {
+        color: $blue-dark;
+        display: inline-block;
+        font-size: $font-size-list-tile-h2;
+        max-height: 96px;
+        max-width: 100%;
+        overflow: hidden;
+        padding: $padding-small 0;
+        text-align: left;
+        text-overflow: ellipsis;
+        transition: 0.2s color;
+        word-wrap: break-word;
+      }
+
+      p {
+        bottom: $margin-bigger;
+        color: $blue-dark;
+        font-size: 0.8em;
+        position: absolute;
+        transition: 0.2s color;
+      }
+
+      &:hover {
+        background: $white;
+        transition: 0.2s background;
+
+        h2 {
+          color: $black;
+          transition: 0.2s color;
+        }
+
+        p {
+          color: $black;
+          transition: 0.2s color;
+        }
+      }
+    }
+
+    &.flex-row__item--list-header-wrapper {
+      background: transparent;
+      text-align: center;
+      padding: $padding-small;
+    }
+
+    .flex-row-item__title {
+      background: $black;
+      color: $white;
+      display: inline-block;
+      font-size: $font-size-tile-h2;
+      margin: $margin-big * 2 auto 0 auto;
+      max-width: 100%;
+      overflow: hidden;
+      padding: $padding-small $padding-regular;
+      text-transform: uppercase;
+      word-break: break-all;
+    }
+  }
+}

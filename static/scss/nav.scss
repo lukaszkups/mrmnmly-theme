@@ -1,0 +1,70 @@
+@import './vars.scss';
+
+.nav-wrapper {
+  background: $gray-light;
+  box-shadow: $nav-shadow;
+  display: block;
+  font-size: .8em;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  z-index: $index-helper;
+
+  .logo-wrapper {
+    color: $black;
+    float: left;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    padding-top: 20px;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  .nav {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .nav__item {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+
+      &.nav__item--active {
+        background: $blue-dark;
+
+        &:hover {
+          background: $blue-dark;
+        }
+
+        a, &:hover a {
+          color: $white;
+        }
+      }
+
+      &:hover {
+        background: $white;
+
+        a {
+          color: $black;
+        }
+      }
+
+      a {
+        color: $black;
+        display: block;
+        margin: 0;
+        padding: $padding-bigger;
+        text-decoration: none;
+      }
+    }
+  }
+}

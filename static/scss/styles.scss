@@ -1,0 +1,49 @@
+@import './vars.scss';
+@import './nav.scss';
+@import './tiles.scss';
+@import './article.scss';
+@import './footer.scss';
+
+body {
+  background: $white;
+  color: $black;
+  font-family: $roboto;
+  font-size: $font-size-regular;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+h1, h2, h3, h4 {
+  font-family: $slab;
+  font-weight: 300;
+}
+
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 1200px;
+  &.wrapper--main-container {
+    margin-top: $margin-bigger * 6;
+
+    &.wrapper--about-page {
+      .flex-row--higher {
+        overflow: hidden;
+        padding-bottom: $padding-bigger * 1.5;
+
+        .flex-row__item {
+          height: auto;
+        }
+      }
+
+      a {
+        color: $blue-dark;
+      }
+    }
+  }
+}
+
+@import './rwd.scss';

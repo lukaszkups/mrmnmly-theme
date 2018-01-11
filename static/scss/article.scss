@@ -1,0 +1,135 @@
+@import './vars.scss';
+
+.wrapper--article-container {
+  box-sizing: border-box;
+  font-size: $font-size-regular;
+  overflow: hidden;
+  padding: 0 $padding-big * 5;
+
+  & + .wrapper.wrapper--main-container.wrapper--article-container{
+    margin-top: $margin-regular;
+    margin-bottom: $margin-big * 2;
+  }
+
+  .article__title {
+    background: $black;
+    clear: both;
+    color: $white;
+    display: inline-block;
+    float: left;
+    font-size: 2.5em;
+    font-weight: 400;
+    padding: $padding-regular $padding-big;
+    text-transform: uppercase;
+  }
+
+  .article__subtitle {
+    background: $black;
+    clear: both;
+    color: $white;
+    display: inline-block;
+    float: left;
+    line-height: 1.5em;
+    margin: $margin-regular 0;
+    padding: $padding-smaller $padding-regular;
+    text-transform: uppercase;
+  }
+
+  .article__content {
+    letter-spacing: 1px;
+    overflow: hidden;
+
+    img {
+      clear: both;
+      display: block;
+      height: auto;
+      margin: $margin-big * 2 0;
+      width: 100%;
+    }
+
+    h1 {
+      clear: both;
+      color: $blue-dark;
+      display: inline-block;
+      float: left;
+      font-family: $slab;
+      font-size: 2.5em;
+      font-weight: 400;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      clear: both;
+      color: $blue-dark;
+      display: inline-block;
+      float: left;
+      font-family: $slab;
+      font-size: 2em;
+      font-weight: 400;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      clear: both;
+      color: $blue-dark;
+      display: inline-block;
+      float: left;
+      font-size: 1.75em;
+      font-weight: 100;
+      letter-spacing: 0;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      clear: both;
+      display: block;
+      line-height: 2em;
+      margin: $margin-regular 0;
+    }
+
+    a {
+      color: $blue-dark;
+    }
+
+    pre,
+    code {
+      background: $black;
+      color: $white;
+      font-family: monospace;
+      line-height: 1.5em;
+      padding: $padding-micro $padding-smaller 0 $padding-smaller;
+      white-space: pre;
+      white-space: pre-wrap;
+    }
+
+    code {
+      display: inline-block;
+    }
+
+    pre {
+      clear: both;
+      display: block;
+      padding: $padding-regular $padding-smaller;
+    }
+
+    blockquote {
+      font-style: italic;
+    }
+
+    ul {
+      padding-left: 0;
+
+      li {
+        line-height: 1.6em;
+        list-style: none;
+
+        &:before {
+          content: '— ';
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+nav.nav-wrapper
+  .wrapper
+    a(href="/").logo-wrapper mrmnmly
+    ul.nav
+      if fileName === 'home'
+        li.nav__item.nav__item--active
+          a(href="/") home
+      else
+        li.nav__item
+          a(href="/") home
+      if fileName === 'about'
+        li.nav__item.nav__item--active
+          a(href="/about/") about
+      else
+        li.nav__item
+          a(href="/about/") about
+      if fileName === 'notes' || folder === 'notes'
+        li.nav__item.nav__item--active
+          a(href="/notes/") notes
+      else
+        li.nav__item
+          a(href="/notes/") notes
+      if fileName === 'projects' || folder === 'projects'
+        li.nav__item.nav__item--active
+          a(href="/projects/") projects
+      else
+        li.nav__item
+          a(href="/projects/") projects

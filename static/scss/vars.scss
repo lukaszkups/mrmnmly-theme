@@ -1,0 +1,46 @@
+// colors
+$black: #28292d;
+$blue-dark: #222f38;
+$gray-light: #e7eaef;
+$gray: #a7a7a7;
+$white: #fff;
+
+// font sizes
+$font-size-regular: 16px;
+$font-size-article: 21px;
+$font-size-promo-tile: 1.5em;
+$font-size-tile-h2: 2em;
+$font-size-list-tile-h2: 1.5em;
+
+// font families
+$roboto: 'Roboto', sans-serif;
+$slab: 'Roboto Slab', sans-serif;
+
+// margins
+$margin-micro: 2px;
+$margin-small: 5px;
+$margin-smaller: 10px;
+$margin-regular: 15px;
+$margin-bigger: 20px;
+$margin-big: 25px;
+
+// paddings
+$padding-micro: 2px;
+$padding-small: 5px;
+$padding-smaller: 10px;
+$padding-regular: 15px;
+$padding-bigger: 20px;
+$padding-big: 25px;
+
+// shadows
+$nav-shadow:  0 0px 5px rgba(0, 0, 0, 0.15);
+
+// z-indexes
+$index-helper: 2;
+$index-navbar: 10;
+
+// other helper variables
+$tile-height: 250px;
+$content-tile-p-line-height: 1.9em;
+$container-width: 1200px;
+$container-article-width: 900px;

@@ -1,0 +1,11 @@
+.wrapper.wrapper--main-container
+  .flex-row.flex-row--wrap
+    .flex-row__item.flex-row__item--single.flex-row__item--list-header-wrapper
+      h2.flex-row-item__title Notes
+      p A place where I share my random thoughts.
+  .flex-row.flex-row--wrap
+    for item in context.list
+      a(href=`${item.slug}/`).flex-row__item.flex-row__item--fixed-size.flex-row__item--clickable
+        .flex-row-item__content-wrapper
+          h2 #{item.meta.title}
+          p Published at #{item.meta.date} by mrmnmly
